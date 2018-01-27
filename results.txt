@@ -1,0 +1,93 @@
+
+
+puzzles with 5-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random			     10		5.6		360.3
+BFS			     10		5.0		47.1
+DFS (depth limit 20)	     10		16.2		19072.7
+DFS (depth limit 50)	     10		48.2		49043.0
+Greedy Search (using h1)     10		5.4		70.4
+A* (using h1)		     10		5.0		6.7
+
+puzzles with 10-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random			     9		12.4		5328.2
+BFS			     10		10.0		747.4
+DFS (depth limit 20)	     10		18.8		24858.0
+DFS (depth limit 50)	     8		49		50515.625
+Greedy Search (using h1)     10		77.8		1470.4
+A* (using h1)		     10		10.0		30.2
+
+puzzles with 15-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random			     7		17.29		9906.7
+BFS			     10		15.0		12672.0
+DFS (depth limit 20)	     10		17.8		68659.0
+DFS (depth limit 50)	     9		48.55555556	70523.111111
+Greedy Search (using h1)     9		85.66666667	3358.888887
+A* (using h1)		     10		15.0		347.7
+
+3. The comparison from these charts show us that some algorithms should not be used for solving the shortest path problems. From the charts, it is shown that A* is the best algorithm because it was able to find the highest quality solutions when compared with other algorithms. Breadth First Search (BFS) from the charts is optimal yet slow. Depth First Search is not optimal nor does it complete the task. Greedy Search searches for the target quickly. Lastly, the random algorithm is randomly chosen which is not the best when solving problems.
+
+A* is the "best of both worlds" because it is fast and completes the task. A*'s avg. moves and avg. states tested is the best amongst the rest. DFS's avg. moves very close to limit depth. BFS's avg. move same as optimal.  Greedy avg move is the greatest amongst all the other algorithms. Random is mainly an average 
+
+
+heuristic h2
+------------
+This heuristic is to calculate the minimum steps that misplaced numbers have to take to the right places if they can move directly without colliding
+
+puzzles with 18-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	5		133.6		541.0
+Greedy (heuristic h2)	10		76.2		725.7
+# Greedy with any other heuristics
+
+A* (heuristic h1)	10		18.0		1602.0
+A* (heuristic h2)	10		18.0		239.3
+# Greedy with any other heuristics
+
+puzzles with 21-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	4		109.0		416.5
+Greedy (heuristic h2)	10		75.4		370.7	
+# Greedy with any other heuristics
+
+A* (heuristic h1)	10		21.0		6301.7
+A* (heuristic h2)	10		21.0		482.3
+# Greedy with any other heuristics
+
+puzzles with 24-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	7		129.7		11284.0
+Greedy (heuristic h2)	10		75.2		593.3
+# Greedy with any other heuristics
+
+A* (heuristic h1)	9		24.0		26430.2222223
+A* (heuristic h2)	10		24.0		1065.5
+# Greedy with any other heuristics
+
+puzzles with 27-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	4		197.5		4285.5
+Greedy (heuristic h2)	10		90.8		693.9
+# Greedy with any other heuristics
+
+A* (heuristic h1)	0		 /		  /
+A* (heuristic h2)	10		27.0		5159
+# Greedy with any other heuristics
+
+From the algorithm comparison, if the heuristic function can approxiate the steps a little bit better when it comes to large scale numbers, then it will significantly improve the performance of the program. As for the chart, it can be seen that A*(h2) is faster than A*(h1) when compared. The same follows for Greedy. In general, h2 is faster than h1 as shown with the avg. moves and avg. states tested. Simply, h2 is faster than h1. 
